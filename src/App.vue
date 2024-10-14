@@ -18,6 +18,9 @@
         --container-color: #9fa2ba;
         --shadow-color: #a0a3ba;
         --text-container-color: #e9eaf0;
+        --color-green: #167120;
+        --color-neutral: #676767;
+        --color-red: #a53939;
     }
 
     [data-theme='dark'] {
@@ -26,6 +29,9 @@
         --container-color: #152e3b;
         --shadow-color: #061218;
         --text-container-color: #d2e5f0;
+        --color-green: #3c9646;
+        --color-neutral: #a9a9a9;
+        --color-red: #ea6666;
     }
 
     body {
@@ -61,7 +67,7 @@
         padding: 7px;
         width: 27px;
     }
-    
+
     .icon-default:hover {
         background-color: var(--body-color);
         color: var(--text-color);
@@ -92,5 +98,28 @@
 
     .icon-input-clear:hover {
         background-color: rgb(212, 58, 58);
+    }
+
+    .color-green {
+        color: var(--color-green)!important;
+    }
+
+    .color-neutral {
+        color: var(--color-neutral)!important;
+    }
+
+    .color-red {
+        color: var(--color-red)!important;
+    }
+
+    .row {
+        display: flex;
+    }
+
+    .division-grid-spacing {
+        height: 5px;
+        border-bottom: 1px dotted var(--text-color);
+        margin-bottom: 20px;
+        margin-top: 20px;
     }
 </style>

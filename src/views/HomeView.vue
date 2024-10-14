@@ -10,6 +10,12 @@
                     //     icon: 'temperature-low'
                     // },
                     {
+                        name: 'CEP',
+                        describe: 'Oferece dados de endereço ao consultar cep.',
+                        url: '/cep',
+                        icon: 'location-dot'
+                    },
+                    {
                         name: 'Tradutor',
                         describe: 'Oferece tradução entre vários idiomas.',
                         url: '/translate',
@@ -20,13 +26,7 @@
                     //     describe: 'Oferece recursos de mapas interativos e personalizáveis.',
                     //     url: '/map',
                     //     icon: 'map-location-dot'
-                    // },
-                    {
-                        name: 'CEP',
-                        describe: 'Oferece dados de endereço ao consultar cep.',
-                        url: '/cep',
-                        icon: 'location-dot'
-                    }
+                    // },ss
                 ]
             }
         },

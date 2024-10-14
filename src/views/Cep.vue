@@ -1,11 +1,13 @@
 <template>
-    <div class="container ">
+    <div class="container">
         <ToBack title="CEP" />
         <h1 class="mt--5">Digite o CEP e acesse informações de endereços de todo território nacional</h1>
         <div class="container-search">
             <InputNumber name="CEP" :maxlength="2" :clearInput="true" v-model="cep" />
-            <ButtonConfirm name="Consultar" @click="verifyCEP" />
+            <ButtonComponent name="Consultar" type="success" @click="verifyCEP" />
         </div>
+
+        <div class="division-grid-spacing" v-if="status"></div>
 
         <div v-if="status" class="container-cep">
             <div>
@@ -80,7 +82,20 @@
                     }
                 },
                 callBack: {
-                    cep: {}
+                    cep: {
+                        cep: '',
+                        siafi: '',
+                        gia: '',
+                        ibge: '',
+                        logradouro: '',
+                        bairro: '',
+                        localidade: '',
+                        estado: '',
+                        uf: '',
+                        regiao: '',
+                        ddd: '',
+                        complemento: ''
+                    }
                 },
                 status: false,
                 statusMessage: false
@@ -89,11 +104,26 @@
 
         methods: {
             verifyCEP() {
-                this.callBack = { cep: {} }
+                this.callBack = {
+                    cep: {
+                        cep: '',
+                        siafi: '',
+                        gia: '',
+                        ibge: '',
+                        logradouro: '',
+                        bairro: '',
+                        localidade: '',
+                        estado: '',
+                        uf: '',
+                        regiao: '',
+                        ddd: '',
+                        complemento: ''
+                    }
+                }
                 this.status = false
                 this.statusMessage = false
 
-                if (this.cep === '') {
+                if (this.cep === "") {
                     this.error.cep.describe = 'Preencha um CEP para fazer a busca!'
                     this.error.cep.code = 0
                     this.error.cep.type = true
@@ -213,5 +243,4 @@
         border-bottom: 1px dotted var(--body-color);
         margin-bottom: 20px;
     }
-
 </style>
