@@ -7,6 +7,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 
 import ToBack from '@/components/ToBack.vue'
 import Message from '@/components/Message.vue'
+import InputText from '@/components/InputText.vue'
 import InputNumber from '@/components/InputNumber.vue'
 import InputSelect from '@/components/InputSelect.vue'
 import InputTextarea from '@/components/InputTextarea.vue'
@@ -18,6 +19,7 @@ const app = createApp(App)
 
 app.component('ToBack', ToBack)
 app.component('Message', Message)
+app.component('InputText', InputText)
 app.component('InputSelect', InputSelect)
 app.component('InputNumber', InputNumber)
 app.component('InputTextarea', InputTextarea)

@@ -3,12 +3,12 @@
         data() {
             return {
                 items: [
-                    // {
-                    //     name: 'Clima',
-                    //     describe: 'Oferece dados meteorológicos em tempo real e previsões.',
-                    //     url: '/temperature',
-                    //     icon: 'temperature-low'
-                    // },
+                    {
+                        name: 'Calculadora',
+                        describe: 'Uma calculadora online com as operações básicas.',
+                        url: '/calculator',
+                        icon: 'calculator'
+                    },
                     {
                         name: 'CEP',
                         describe: 'Oferece dados de endereço ao consultar cep.',
