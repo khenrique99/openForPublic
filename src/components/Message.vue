@@ -1,12 +1,13 @@
 <template>
     <div class="message-system" :class="{ 'error': type == 'error', 'success': type == 'success' }">
         <h1>{{ messageText }}</h1>
+
         <font-awesome-icon icon="rectangle-xmark" class="icon-close-modal" @click="closeMessage" />
     </div>
 </template>
 
 <script lang="ts">
-    import { defineComponent } from 'vue';
+    import { defineComponent } from 'vue'
 
     export default defineComponent({
         name: 'Message',
@@ -20,9 +21,10 @@
                 required: true
             }
         },
+
         methods: {
             closeMessage() {
-                this.$emit('close-message');
+                this.$emit('close-message')
             }
         }
     });

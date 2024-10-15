@@ -18,8 +18,8 @@
     import type { PropType } from 'vue'
 
     interface LanguageOption {
-        name: string;
-        acronym: string;
+        name: string
+        acronym: string
     }
 
     export default defineComponent({

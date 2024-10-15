@@ -22,10 +22,6 @@
             return {
 
             }
-        },
-
-        methods: {
-
         }
     }
 </script>

@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-    import { defineComponent, computed } from 'vue';
+    import { defineComponent, computed } from 'vue'
 
     export default defineComponent({
         name: 'InputNumber',
@@ -38,20 +38,20 @@
         },
 
         setup(props, { emit }) {
-            const currentValue = computed(() => props.modelValue);
+            const currentValue = computed(() => props.modelValue)
 
             const updateValue = (event: Event) => {
-                const value = (event.target as HTMLInputElement)?.value;
+                const value = (event.target as HTMLInputElement)?.value
                 if (value !== undefined) {
-                    emit('update:modelValue', value);
+                    emit('update:modelValue', value)
                 }
-            };
+            }
 
             const clear = () => {
-                emit('update:modelValue', '');
-            };
+                emit('update:modelValue', '')
+            }
 
-            return { currentValue, updateValue, clear };
+            return { currentValue, updateValue, clear }
         },
     })
 </script>

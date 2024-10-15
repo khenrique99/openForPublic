@@ -52,7 +52,7 @@
         </div>
 
         <Message type="error" :messageText="error.translate.describe" v-if="error.translate.type" @close-message="clearMessageTranslate" />
-        <Message type="success" messageText="CEP encontrado com sucesso!" v-if="statusMessage" />
+        <Message type="success" messageText="Tradução feita com sucesso!" v-if="statusMessage" />
     </div>
 </template>
 
@@ -150,24 +150,20 @@
             },
 
             translationCallBack(status: any, response: any) {
-                console.log(status)
-                console.log(response.data)
-
                 if (status === 200) {
-                    // if (response.data.erro) {
-                    //     this.setErrorCEP(1)
-                    // } else {
-                        // this.setErrorCEP(0)
-                        this.status = true
-                        this.statusMessage = true
-                        this.translate.text = response.data.responseData.translatedText
-                        this.translate.match = response.data.responseData.match
-                        this.translate.options = response.data.matches                        
-                    // }
-                } else if (status === 500) {
-                    // this.setErrorCEP(2)
+                    this.status = true
+                    this.statusMessage = true
+                    this.error.translate.type = false
+                    this.error.translate.describe = ''
+                    this.translate.text = response.data.responseData.translatedText
+                    this.translate.match = response.data.responseData.match
+                    this.translate.options = response.data.matches
                 } else {
-                    // this.setErrorCEP(3)
+                    this.status = false
+                    this.statusMessage = false
+                    this.error.translate.code = 2
+                    this.error.translate.type = true
+                    this.error.translate.describe = 'Erro não previsto no sistema!'
                 }
             },
 
@@ -188,7 +184,7 @@
             },
 
             updateText(newText: string) {
-                this.text = newText;
+                this.text = newText
             },
 
             clearMessageTranslate() {

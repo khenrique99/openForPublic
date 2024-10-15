@@ -145,9 +145,9 @@
                     url: `https://viacep.com.br/ws/${this.cep}/json/`,
                     metodo: 'GET',
                     envio: ''
-                };
+                }
 
-                sendAxios(settings, this.getCEPCallBack, null);
+                sendAxios(settings, this.getCEPCallBack, null)
             },
 
             getCEPCallBack(status: any, response: any) {
@@ -188,8 +188,8 @@
             statusMessage(newValue) {
                 if (newValue) {
                     setTimeout(() => {
-                        this.statusMessage = false;
-                    }, 3000);
+                        this.statusMessage = false
+                    }, 3000)
                 }
             }
         }
