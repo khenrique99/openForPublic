@@ -83,23 +83,6 @@
         width: 27px;
     }
 
-    .icon-input-clear {
-        position: absolute;
-        right: 0;
-        font-size: 23px;
-        color: white;
-        background-color: rgb(227, 169, 169);
-        cursor: pointer;
-        margin-top: 7px;
-        margin-right: -12px;
-        padding: 2px 5px;
-        border-radius: 5px;
-    }
-
-    .icon-input-clear:hover {
-        background-color: rgb(212, 58, 58);
-    }
-
     .color-green {
         color: var(--color-green)!important;
     }

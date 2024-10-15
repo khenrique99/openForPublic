@@ -1,5 +1,7 @@
 <template>
     <div class="input-template">
+        <label>{{ name }}</label>
+
         <input
             type="number"
             :placeholder="name"
@@ -8,8 +10,6 @@
             class="input-default"
             @input="updateValue($event)"
         />
-
-        <font-awesome-icon icon="xmark" v-if="clearInput" class="icon-input-clear" @click="clear" />
     </div>
 </template>
 
@@ -30,10 +30,6 @@
             maxLength: {
                 type: Number,
                 default: 2
-            },
-            clearInput: {
-                type: Boolean,
-                default: false
             }
         },
 
@@ -47,29 +43,44 @@
                 }
             }
 
-            const clear = () => {
-                emit('update:modelValue', '')
-            }
-
-            return { currentValue, updateValue, clear }
+            return { currentValue, updateValue }
         },
     })
 </script>
 
 <style scoped>
     .input-template {
+        background-color: var(--container-color);
+        border-radius: 15px;
+        padding: 20px;
         position: relative;
-        width: 100%;
     }
-    .input-default {
-        width: 100%;
+
+    .input-template label {
+        color: var(--body-color);
+        background-color: var(--text-color);
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 12px;
+        margin-left: 20px;
+        padding: 4px 6px;
+        z-index: 1;
+        border-radius: 7px 7px 7px 0px;
+    }
+
+    .input-template input {
+        width: calc(100% - 28px);
         font-size: 18px;
         padding: 10px 0px;
         text-indent: 20px;
-        color: var(--text-container-color);
-        background-color: var(--container-color);
+        background-color: var(--body-color);
+        color: var(--text-color);
+        font-size: 15px;
+        margin-top: 5px;
         border: none;
         outline: none;
         border-radius: 7px;
+        padding: 19px 13px 13px 13px;
     }
 </style>

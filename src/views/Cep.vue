@@ -2,9 +2,17 @@
     <div class="container">
         <ToBack title="CEP" />
         <h1 class="mt--5">Digite o CEP e acesse informações de endereços de todo território nacional</h1>
+
         <div class="container-search">
-            <InputNumber name="CEP" :maxlength="2" :clearInput="true" v-model="cep" />
-            <ButtonComponent name="Consultar" type="success" @click="verifyCEP" />
+            <div class="options-search">
+                <InputNumber class="component" name="CEP" :maxlength="2" v-model="cep" />
+            </div>
+            <div class="div-btn-translate">
+                <div class="btn-translate">
+                    <ButtonComponent name="Limpar" type="neutral" @click="clearCEP" />
+                    <ButtonComponent name="Consultar" type="success" @click="verifyCEP" class="spacing-left" />
+                </div>
+            </div>
         </div>
 
         <div class="division-grid-spacing" v-if="status"></div>
@@ -181,6 +189,28 @@
                     this.error.cep.type = false
                     this.error.cep.describe = ''
                 }
+            },
+
+            clearCEP() {
+                this.cep = ''
+                this.callBack = {
+                    cep: {
+                        cep: '',
+                        siafi: '',
+                        gia: '',
+                        ibge: '',
+                        logradouro: '',
+                        bairro: '',
+                        localidade: '',
+                        estado: '',
+                        uf: '',
+                        regiao: '',
+                        ddd: '',
+                        complemento: ''
+                    }
+                }
+                this.status = false
+                this.statusMessage = false
             }
         },
 
@@ -198,11 +228,13 @@
 
 <style scoped>
     .container-search {
-        width: 50%;
+        width: 55%;
         margin: 0 auto;
-        display: grid;
-        grid-template-columns: 85% 15%;
-        grid-gap: 0px 30px;
+    }
+
+    .options-search {
+        display: flex;
+        align-items: center;
     }
 
     .container-cep {
@@ -242,5 +274,24 @@
         height: 5px;
         border-bottom: 1px dotted var(--body-color);
         margin-bottom: 20px;
+    }
+
+    .component {
+        width: 100%;
+    }
+
+    .div-btn-translate {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+    }
+
+    .btn-translate {
+        display: flex;
+        width: 60%;
+    }
+
+    .spacing-left {
+        margin-left: 30px;
     }
 </style>
