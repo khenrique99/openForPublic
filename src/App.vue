@@ -1,12 +1,13 @@
 <script setup lang="ts">
     import { RouterView } from 'vue-router'
     import Menu from '@/components/Menu.vue'
+    import Footer from '@/components/Footer.vue'
 </script>
 
 <template>
     <Menu />
-
-    <RouterView />
+    <RouterView class="spacing-top spacing-bottom" />
+    <Footer />
 </template>
 
 <style>
@@ -16,7 +17,7 @@
         --body-color: #d2d4e7;
         --text-color: #4f5165;
         --container-color: #9fa2ba;
-        --shadow-color: #a0a3ba;
+        --shadow-color: #84879d;
         --text-container-color: #e9eaf0;
         --color-green: #167120;
         --color-neutral: #676767;
@@ -104,5 +105,13 @@
         border-bottom: 1px dotted var(--text-color);
         margin-bottom: 20px;
         margin-top: 20px;
+    }
+
+    .spacing-top {
+        margin-top: 50px;
+    }
+
+    .spacing-bottom {
+        margin-bottom: 50px;
     }
 </style>
