@@ -1,11 +1,11 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    },
-    {
-      "path": "./tsconfig.app.json"
+    "compilerOptions": {
+        "module": "nodenext",  // Altere para "nodenext"
+        "moduleResolution": "nodenext",  // Isso já estava correto
+        "target": "esnext",  // Ou outro valor adequado para o seu projeto
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["src/*"]
+        }
     }
-  ]
 }
