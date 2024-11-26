@@ -7,6 +7,7 @@
             <div class="options-translate">
                 <InputSelect class="component" name="Traduzir do" :options="languages" :default="translationOf" @update:selected="(value: string) => handleSelectChange(value, true)" />
                 <font-awesome-icon class="component icon-translate" icon="fa-solid fa-right-long" />
+                <font-awesome-icon class="component icon-translate-mobile" icon="fa-solid fa-down-long" />
                 <InputSelect class="component" name="para o" :options="languages" :default="translationFor" @update:selected="(value: string) => handleSelectChange(value, false)" />
             </div>
             <InputTextarea class="textarea" name="Digite o texto abaixo" :text="text" @update:text="updateText" />
@@ -231,6 +232,13 @@
         color: var(--text-color);
     }
 
+    .icon-translate-mobile {
+        color: var(--text-color);
+        display: none;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
     .textarea {
         margin-top: 10px;
         margin-bottom: 20px;
@@ -293,5 +301,30 @@
 
     .pointer {
         cursor: pointer!important;
+    }
+
+    @media (max-width: 1100px) {
+        .container-traslate {
+            width: 95%;
+            margin-bottom: 25px;
+        }
+        .container-traslate-after {
+            width: 85%;
+            margin-bottom: 25px;
+        }
+    }
+
+    @media (max-width: 680px) {
+        .options-translate {
+            flex-direction: column;
+            width: 89%;
+            margin: 0 auto;
+        }
+        .icon-translate {
+            display: none;
+        }
+        .icon-translate-mobile {
+            display: block;
+        }
     }
 </style>

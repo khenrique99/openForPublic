@@ -50,6 +50,7 @@
         padding: 5px 0px;
         justify-content: right;
         box-shadow: 0px 1px 30px 1px var(--shadow-color);
+        z-index: 9;
     }
     .nav-container-spacing {
         margin-right: 15px

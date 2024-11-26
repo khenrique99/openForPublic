@@ -114,4 +114,18 @@
         background-color: var(--text-color);
         color: var(--container-color);
     }
+
+    @media (max-width: 1100px) {
+        .div-nav-home {
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 50px;
+        }
+    }
+
+    @media (max-width: 730px) {
+        .div-nav-home {
+            grid-template-columns: 1fr;
+            margin-bottom: 50px;
+        }
+    }
 </style>

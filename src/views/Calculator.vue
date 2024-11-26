@@ -197,5 +197,11 @@
         width: 100%;
         margin-left: -20px;
     }
+
+    @media (max-width: 415px) {
+        .container-calculator{
+            width: 85%;
+        }
+    }
 </style>
   

@@ -294,4 +294,16 @@
     .spacing-left {
         margin-left: 30px;
     }
+
+    @media (max-width: 1000px) {
+        .container-search {
+            width: 95%;
+        }
+        .container-cep {
+            width: 85%;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 25px;
+        }
+    }
 </style>
