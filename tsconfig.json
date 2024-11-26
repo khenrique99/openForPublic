@@ -1,11 +1,24 @@
 {
     "compilerOptions": {
-        "module": "nodenext",  // Altere para "nodenext"
-        "moduleResolution": "nodenext",  // Isso já estava correto
-        "target": "esnext",  // Ou outro valor adequado para o seu projeto
-        "baseUrl": ".",
-        "paths": {
-            "@/*": ["src/*"]
-        }
-    }
+        "target": "esnext",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "jsx": "preserve",
+        "resolveJsonModule": true,
+        "types": ["vite/client", "vue"]
+    },
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.d.ts",
+        "src/**/*.tsx",
+        "src/**/*.vue"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
 }
