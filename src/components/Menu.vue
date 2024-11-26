@@ -7,10 +7,12 @@
                     <font-awesome-icon icon="sun" class="icon-default" v-if="theme" @click="toggleTheme" />
                 </RouterLink>
             </div>
-            <div class="nav-container-div">
-                <RouterLink to="/">
-                    <font-awesome-icon icon="house" class="icon-default" />
-                </RouterLink>
+            <div class="nav-container-spacing">
+                <div class="nav-container-div">
+                    <RouterLink to="/">
+                        <font-awesome-icon icon="house" class="icon-default" />
+                    </RouterLink>
+                </div>
             </div>
         </nav>
     </header>
@@ -39,11 +41,18 @@
 
 <style>
     .nav-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
         display: flex;
         background-color: var(--container-color);
-        padding: 5px 10px;
+        padding: 5px 0px;
         justify-content: right;
         box-shadow: 0px 1px 30px 1px var(--shadow-color);
+    }
+    .nav-container-spacing {
+        margin-right: 15px
     }
     .nav-container-div {
         padding: 2px;

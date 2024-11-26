@@ -14,7 +14,7 @@ import InputTextarea from '@/components/InputTextarea.vue'
 import ButtonComponent from '@/components/ButtonComponent.vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(fas);
+library.add(fas)
 const app = createApp(App)
 
 app.component('ToBack', ToBack)
