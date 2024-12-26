@@ -50,6 +50,12 @@
         padding: 20px;
     }
 
+    h2 {
+        font-size: 27px;
+        text-align: center;
+        padding: 20px;
+    }
+
     .mt--5 {
         margin-top: -5px;
     }

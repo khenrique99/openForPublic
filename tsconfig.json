@@ -9,7 +9,8 @@
         "forceConsistentCasingInFileNames": true,
         "jsx": "preserve",
         "resolveJsonModule": true,
-        "types": ["vite/client", "vue"]
+        "types": ["vite/client", "vue"],
+        "typeRoots": ["./node_modules/@types", "./src"]
     },
     "include": [
         "src/**/*.ts",

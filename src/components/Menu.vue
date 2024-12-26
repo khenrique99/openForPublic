@@ -19,6 +19,8 @@
 </template>
 
 <script lang="ts">
+    import { useThemeStore } from '../stores/ThemeStores'
+
     export default {
         name: 'Menu',
         data() {
@@ -29,8 +31,11 @@
 
         methods: {
             toggleTheme() {
+                const themeStore = useThemeStore()
+
                 this.theme = !this.theme
 
+                themeStore.setTheme(this.theme)
                 document.documentElement.setAttribute('data-theme', this.theme ? 'dark' : '' )
             }
         }

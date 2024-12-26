@@ -21,6 +21,12 @@
                         url: '/translate',
                         icon: 'globe'
                     },
+                    {
+                        name: 'Nomes',
+                        describe: 'Oferece informações sobre os nomes no Brasil.',
+                        url: '/name',
+                        icon: 'people-group'
+                    },
                     // {
                     //     name: 'Mapas',
                     //     describe: 'Oferece recursos de mapas interativos e personalizáveis.',
